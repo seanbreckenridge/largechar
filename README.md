@@ -35,5 +35,6 @@ Examples:
   largechar -c "pr8dea7AvZoirx2S22TB" # show a password to someone
 ```
 
-Made with [electron-quick-start](https://github.com/electron/electron-quick-start)
+To quit, use whatever keyboard shortcut you use to quit/force-quit usually.
 
+Made with [electron-quick-start](https://github.com/electron/electron-quick-start).
