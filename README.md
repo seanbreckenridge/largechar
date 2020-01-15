@@ -8,7 +8,7 @@ This is a replacement for Alfred's [LargeType](https://www.alfredapp.com/help/fe
 
 ## Install
 
-Requires: `yarn`
+Requires: [`yarn`](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 
 ```
 git clone https://github.com/seanbreckenridge/largechar
