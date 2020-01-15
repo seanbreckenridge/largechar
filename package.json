@@ -1,7 +1,7 @@
 {
   "name": "largechar",
   "version": "1.0.0",
-  "description": "Display large text on your screen",
+  "description": "Displays the passed string as the entire screen.",
   "main": "main.js",
   "scripts": {
     "start": "electron --disable-gpu ."
