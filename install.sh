@@ -4,8 +4,8 @@
 command -v yarn >/dev/null 2>&1 || { echo "Could not find 'yarn', install that and re-run install.sh" >&2; exit 1; }
 
 # change to current dir
-cd `dirname $BASH_SOURCE`
-cur_dir=$(pwd)
+cd "$(dirname ${BASH_SOURCE[0]})"
+cur_dir="$(pwd)"
 
 # pull dependencies
 
