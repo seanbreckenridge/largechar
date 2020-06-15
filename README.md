@@ -13,7 +13,7 @@ Requires: [`yarn`](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 ```
 git clone https://gitlab.com/seanbreckenridge/largechar
 cd largechar
-./install.sh
+./install
 mv largechar /usr/local/bin # to somewhere on your $PATH
 ```
 
