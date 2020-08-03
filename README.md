@@ -35,6 +35,8 @@ Examples:
   largechar -c "pr8dea7AvZoirx2S22TB" # show a password to someone
 ```
 
+If no arguments are passed, the wrapper script will try and read from STDIN, e.g.: `date | largechar`
+
 To quit, use whatever keyboard shortcut you use to quit/force-quit usually.
 
 Made with [electron-quick-start](https://github.com/electron/electron-quick-start).
