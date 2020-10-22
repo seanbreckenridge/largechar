@@ -28,7 +28,7 @@ for arg in "$@"; do
 done
 
 if [[ "${#TEXT[@]}" == "0" ]]; then
-	echo "No text recieved as arguments, reading from STDIN..."
+	echo "No text received as arguments, reading from STDIN..."
 	TEXTSTR="$(cat)" # read from stdin
 else
 	TEXTSTR="${TEXT[*]}" # convert arg array to text
