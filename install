@@ -2,7 +2,7 @@
 
 # make sure yarn is installed
 command -v yarn >/dev/null 2>&1 || {
-	echo "Could not find 'yarn', install that and re-run install.sh" >&2
+	echo "Could not find 'yarn', install that and re-run install" >&2
 	exit 1
 }
 
