@@ -1,5 +1,5 @@
 usage="Displays large characters on your screen
-https://gitlab.com/seanbreckenridge/largechar
+https://github.com/seanbreckenridge/largechar
 
 Usage:
   largechar [-h|--help]
@@ -10,7 +10,7 @@ Examples:
   largechar youremail@somewhere.com
   largechar -c pr8dea7AvZoirx2S22TB # show a password to someone"
 
-if [[ "$1" == "-h" || "$1" == "-help" || "$1" == "--help" ]]; then
+if [[ "$1" =~ ^[-]{1,2}h(elp)?$ ]]; then
 	echo "$usage"
 	exit 0
 fi
@@ -20,7 +20,7 @@ declare -a ARGS TEXT
 ARGS=()
 TEXT=()
 for arg in "$@"; do
-	if [[ "$arg" == "-c" || "$arg" = "--colorize" ]]; then
+	if [[ "$arg" == '-c' || "$arg" == '--colorize' ]]; then
 		ARGS+=("-c")
 	else
 		TEXT+=("$arg")
@@ -29,10 +29,7 @@ done
 
 if [[ "${#TEXT[@]}" == "0" ]]; then
 	echo "No text received as arguments, reading from STDIN..."
-	TEXTSTR="$(cat)" # read from stdin
+	ARGS+=("$(cat)") # read from stdin
 else
-	TEXTSTR="${TEXT[*]}" # convert arg array to text
+	ARGS+=("${TEXT[*]}") # convert arg array to text
 fi
-
-ARGS+=("$TEXTSTR")
-
