@@ -114,9 +114,10 @@ function main(display_text, colorize) {
 // -c/--colorize: colorizes the display
 function parse_args(args) {
   let argv = args.slice(3)
-  let options = {}
-  options.colorize = false
-  options.text = "you didnt give me any text to display!"
+  let options = {
+    colorize: false,
+    text: "error getting text to display"
+  };
   while (argv.length > 0) {
     let arg = argv.shift()
     if (arg === "--colorize" || arg === "-c") {
