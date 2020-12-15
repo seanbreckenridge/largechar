@@ -5,6 +5,6 @@ copy_script: build
 	echo "Attempting to install to $(TARGET_BIN)"
 	cp ./largechar $(TARGET_BIN)
 
-build:
+build: help.bash install
 	./install
 
