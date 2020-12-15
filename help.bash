@@ -11,7 +11,7 @@ Examples:
   largechar -c pr8dea7AvZoirx2S22TB # show a password to someone"
 
 if [[ "$1" =~ ^[-]{1,2}h(elp)?$ ]]; then
-	echo "$usage"
+	echo "${usage}"
 	exit 0
 fi
 
@@ -28,8 +28,12 @@ for arg in "$@"; do
 done
 
 if [[ "${#TEXT[@]}" == "0" ]]; then
-	echo "No text received as arguments, reading from STDIN..."
-	ARGS+=("$(cat)") # read from stdin
-else
-	ARGS+=("${TEXT[*]}") # convert arg array to text
+	echo "No text received as arguments, reading from STDIN..." >&2
+	TEXT+=("$(cat)") # read from stdin
 fi
+if [[ "${#TEXT[@]}" == "0" ]] || [[ -z "${TEXT[*]}" ]]; then
+	echo 'Did not recieve any text to display...' >&2
+	echo "${usage}"
+	exit 1
+fi
+ARGS+=("${TEXT[*]}") # convert arg array to text
