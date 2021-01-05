@@ -6,11 +6,11 @@
   "scripts": {
     "start": "electron --disable-gpu ."
   },
-  "repository": "https://gitlab.com/seanbreckenridge/largechar",
+  "repository": "https://github.com/seanbreckenridge/largechar",
   "keywords": [
     "display"
   ],
-  "author": "https://gitlab.com/seanbreckenridge/",
+  "author": "https://github.com/seanbreckenridge/",
   "license": "MIT",
   "dependencies": {
     "electron": "^7.2.4"

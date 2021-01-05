@@ -11,7 +11,7 @@ This is a replacement for Alfred's [LargeType](https://www.alfredapp.com/help/fe
 Requires: [`yarn`](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 
 ```
-git clone https://gitlab.com/seanbreckenridge/largechar
+git clone https://github.com/seanbreckenridge/largechar
 cd largechar
 ./install
 mv largechar /usr/local/bin # to somewhere on your $PATH
@@ -23,7 +23,7 @@ Note: This is an electron app, but it doesn't build as an application, I just ru
 
 ```
 Displays large characters on your screen
-https://gitlab.com/seanbreckenridge/largechar
+https://github.com/seanbreckenridge/largechar
 
 Usage:
   largechar [-h|--help]
