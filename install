@@ -24,7 +24,7 @@ script_name="${cur_dir}/largechar"
 echo '#!/usr/bin/env bash' >"${script_name}"
 cat ./help.bash >>"${script_name}"
 # shellcheck disable=SC2016
-printf 'yarn --cwd "%s" start "${ARGS[@]}"\n' "${cur_dir}" >>"${script_name}"
+printf 'exec yarn --cwd "%s" start "${ARGS[@]}"\n' "${cur_dir}" >>"${script_name}"
 chmod +x "${script_name}"
 # shellcheck disable=SC2016
 printf 'Copy %s to somewhere on your $PATH\n' "${script_name}"
