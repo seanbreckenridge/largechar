@@ -114,7 +114,7 @@ function main(display_text, colorize) {
 // --help is handled by the shell code wrapper
 // -c/--colorize: colorizes the display
 function parse_args(args) {
-  let argv = args.slice(3);
+  let argv = args.slice(2);
   let options = {
     colorize: false,
     text: "error getting text to display",

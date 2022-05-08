@@ -4,7 +4,7 @@
   "description": "Displays the passed string as the entire screen.",
   "main": "main.js",
   "scripts": {
-    "start": "electron --disable-gpu ."
+    "start": "electron ."
   },
   "repository": "https://github.com/seanbreckenridge/largechar",
   "keywords": [

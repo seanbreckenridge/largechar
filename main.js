@@ -15,6 +15,7 @@ function createWindow() {
     width: width,
     height: height,
     resizable: false,
+    sandbox: false,
     alwaysOnTop: true,
     skipTaskbar: true,
     fullscreen: false,
