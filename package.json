@@ -13,7 +13,7 @@
   "author": "https://github.com/seanbreckenridge/",
   "license": "MIT",
   "dependencies": {
-    "electron": "==9.4.4"
+    "electron": "==15.5.5"
   },
   "devDependencies": {
     "minimist": ">=1.2.6"
