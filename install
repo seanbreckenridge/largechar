@@ -7,24 +7,22 @@ command -v yarn >/dev/null 2>&1 || {
 }
 
 # change to current dir
-if ! cd "$(dirname "${BASH_SOURCE[0]}")"; then
+if ! cd "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"; then
 	echo "Could not cd to the repo root directory" >&2
 	exit 1
 fi
 cur_dir="$(pwd)"
 
 # pull dependencies
-
 yarn install
 
 # Create wrapper script
-
 script_name="${cur_dir}/largechar"
-
-echo '#!/usr/bin/env bash' >"${script_name}"
-cat ./help.bash >>"${script_name}"
-# shellcheck disable=SC2016
-printf 'exec yarn --cwd "%s" start "${ARGS[@]}"\n' "${cur_dir}" >>"${script_name}"
+(
+	echo '#!/usr/bin/env bash'
+	cat ./help.bash
+	# shellcheck disable=SC2016
+	printf 'exec yarn --cwd "%s" start "${ARGS[@]}"\n' "${cur_dir}"
+) >"${script_name}"
 chmod +x "${script_name}"
-# shellcheck disable=SC2016
-printf 'Copy %s to somewhere on your $PATH\n' "${script_name}"
+echo "Copy ${script_name} to somewhere on your \$PATH"
