@@ -1,12 +1,13 @@
 .DEFAULT_GOAL := largechar
 TARGET_BIN="${HOME}/.local/bin"
+BIN=largechar
 
 install: build
-	@@ echo "Attempting to install to $(TARGET_BIN)"
-	cp ./largechar $(TARGET_BIN)
+	@@ echo "Installing $(BIN) to install to $(TARGET_BIN)"
+	@@ cp -v ./$(BIN) $(TARGET_BIN)
 
-largechar: help.bash main.js renderer.js style.css index.html
+$(BIN): help.bash main.js renderer.js style.css index.html
 	./build
 
 clean:
-	rm -f largechar
+	rm -f ./$(BIN)
