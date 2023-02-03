@@ -1,10 +1,13 @@
-.DEFAULT_GOAL := copy_script
+.DEFAULT_GOAL := build
 TARGET_BIN="${HOME}/.local/bin"
 
-copy_script: build
-	echo "Attempting to install to $(TARGET_BIN)"
+install: build
+	@@ echo "Attempting to install to $(TARGET_BIN)"
 	cp ./largechar $(TARGET_BIN)
 
-build: help.bash install
-	./install
+build: largechar
+largechar: help.bash main.js renderer.js style.css index.html
+	./build
 
+clean:
+	rm -f largechar

@@ -13,8 +13,8 @@ Requires: [`yarn`](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 ```
 git clone https://github.com/seanbreckenridge/largechar
 cd largechar
-./install
-mv largechar /usr/local/bin # to somewhere on your $PATH
+make
+make install
 ```
 
 Note: This is an electron app, but it doesn't build as an application, I just run it from this directory. Installing creates a shell script that you can put somewhere on your `$PATH`, which references the directory you clone this into.
