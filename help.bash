@@ -32,7 +32,7 @@ if [[ "${#TEXT[@]}" == "0" ]]; then
 	TEXT+=("$(cat)") # read from stdin
 fi
 if [[ "${#TEXT[@]}" == "0" ]] || [[ -z "${TEXT[*]}" ]]; then
-	echo 'Did not recieve any text to display...' >&2
+	echo 'Did not receive any text to display...' >&2
 	echo "${usage}"
 	exit 1
 fi
