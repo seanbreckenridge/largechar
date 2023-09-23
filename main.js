@@ -6,7 +6,7 @@ const { app, BrowserWindow, screen } = require("electron");
 let mainWindow;
 
 function createWindow() {
-  // Get screen width/hight to avoid window flickering
+  // Get screen width/height to avoid window flickering
   // while going fullscreen
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
