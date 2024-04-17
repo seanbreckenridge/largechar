@@ -41,7 +41,6 @@ function not_done(target_el, want_width, increase) {
 //                  or decrease the element size
 // increase_type - true is multiplicative, false is additive increase
 function loop(target_el, want_width, increase, increase_type) {
-  let target_el_width = get_el_width(target_el);
   console.log("increase" + increase);
   while (not_done(target_el, want_width, increase)) {
     if (increase) {
